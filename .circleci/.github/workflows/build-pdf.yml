@@ -1,0 +1,32 @@
+name: Build PDF
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git installation
+        run: apt-get -qq update && apt-get -y install git
+
+      - name: LaTeX installation
+        run: apt-get -qq update && apt-get install -y --no-install-recommends latexmk texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-xetex texlive-pictures texlive-lang-french texlive-bibtex-extra biber lmodern fonts-font-awesome
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build the PDF
+        run: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cv-pdf
+          path: example/cv.pdf

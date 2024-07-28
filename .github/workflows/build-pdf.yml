@@ -33,9 +33,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git clone --depth=1 --branch=gh-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
-          cp example/cv.pdf gh-pages/
-          cd gh-pages
-          git add cv.pdf
+          cp example/cv.pdf .
+          git add -f cv.pdf
           git commit -m 'Update PDF'
           git push

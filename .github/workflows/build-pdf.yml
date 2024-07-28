@@ -27,3 +27,15 @@ jobs:
         with:
           name: cv-pdf
           path: example/cv.pdf
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git clone --depth=1 --branch=gh-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cp example/cv.pdf gh-pages/
+          cd gh-pages
+          git add cv.pdf
+          git commit -m 'Update PDF'
+          git push

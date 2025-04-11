@@ -17,13 +17,13 @@ jobs:
         run: sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-xetex texlive-pictures texlive-lang-french texlive-bibtex-extra biber lmodern fonts-font-awesome
 
       - name: Checkout code
-        uses: actions/checkout
+        uses: actions/checkout@v2
 
       - name: Build the PDF
         run: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
           path: example/cv.pdf

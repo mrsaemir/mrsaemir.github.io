@@ -14,22 +14,27 @@
 %\renewcommand{\labelitemi}{$\bullet$}
 \begin{experiences}
   \experience
-    {Oct 2024} {Internet Researcher}{\link{https://www.mpi-inf.mpg.de/departments/inet}{Max-Planck-Institut}}{Germany}
-    {Apr 2024} {
-      During my time at MPI, I was tasked with analyzing a massive dataset of 3.5 billion DNS TXT records to identify insecure or malicious use cases. This project aimed to replicate the findings of the paper “TXTing 101: Finding Security Issues in the Long Tail of DNS TXT Records” by Van Der Toorn et al. (2020) and extend the analysis using a different dataset. There, my primary responsibilities included analyzing and categorizing unique DNS TXT records and investigating abnormal use cases.
+    {Dec 2024} {Research Assistant}{\link{https://www.mpi-inf.mpg.de/departments/inet}{Max-Planck-Institut}}{Germany}
+    {Now} {
+        At Professor Anja Feldmann's Internet Architecture Research Group,
+        I worked under the guidance of Florian Steurer (a PAM 2025 Best Long Paper Award winner)
+        to develop a tool in Go to scan the enormous IPv6 reverse DNS tree and generate an IPv6 hitlist.
+        To accomplish this, I extended an existing tool, YoDNS, which had previously been written
+        by Florian Steurer to scan the forward DNS. During the experiment, we sent billions of queries
+        to navigate the rDNS tree over the course of several days.
     }
-    {Python, Apache Spark, Apache Hadoop}
+    {Go, Prometheus, Grafana}
   \emptySeparator
   \experience
-    {Now} {Software Engineer}{\link{https://geops.com}{geOps}}{Germany}
+    {Nov 2024} {Software Engineer}{\link{https://geops.com}{geOps}}{Germany}
     {July 2023} {
       geOps develops modern web applications based on geospatial and real-time data,
       with a strong focus on open-source technologies in transport, mobility, logistics,
       and the environment. At geOps, my responsibilities included:
       \begin{itemize}
-        \item Refactoring data processing components to enhance scalability and performance.
-        \item Upgrading codebases to use SQLAlchemy2 and integrating asynchronous drivers for efficiency.
         \item Contributing to the integration of APIs from Deutsche Bahn, Swiss Railways, and S-Bahn Munich.
+        \item Upgrading codebases to use SQLAlchemy2 and integrating asynchronous drivers for efficiency.
+        \item Refactoring data processing components to enhance scalability and performance.
       \end{itemize}
     }
     {Python, Asyncio, Django, Flask, SQLAlchemy, PostgreSQL, Redis, GTFS/GTFS-RT}

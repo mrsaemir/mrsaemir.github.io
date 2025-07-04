@@ -15,15 +15,23 @@
 \begin{experiences}
   \experience
     {Dec 2024} {Research Assistant}{\link{https://www.mpi-inf.mpg.de/departments/inet}{Max-Planck-Institut}}{Germany}
-    {Now} {
-        At Professor Anja Feldmann's Internet Architecture Research Group,
-        I worked under the guidance of Florian Steurer (a PAM 2025 Best Long Paper Award winner)
-        to develop a tool in Go to scan the enormous IPv6 reverse DNS tree and generate an IPv6 hitlist.
-        To accomplish this, I extended an existing tool, YoDNS, which had previously been written
-        by Florian Steurer to scan the forward DNS. During the experiment, we sent billions of queries
-        to navigate the rDNS tree over the course of several days.
+    {Sep 2025} {
+        Worked in Professor Anja Feldmann’s lab under Florian Steurer (PAM 2025 Best Paper Award)
+        to deliver a high-performance tool in Go for large-scale IPv6 reverse DNS mapping.
+        My responsibilities included:
+        \begin{itemize}
+            \item Extending \href{https://github.com/DNS-MSMT-INET/yodns}{YoDNS} for IPv6 reverse DNS scanning.
+            \item Implementing load-balancing to protect nameservers.
+            \item Building heuristic probing for efficient DNS tree enumeration.
+        \end{itemize}
+
+        \begin{itemize}
+            \item Extended the YoDNS forward DNS scanner to support high-volume IPv6 reverse DNS scanning.
+            \item
+            \item
+        \end{itemize}
     }
-    {Go, Prometheus, Grafana}
+    {Go, Python, Apache Spark, Prometheus, Grafana}
   \emptySeparator
   \experience
     {Nov 2024} {Software Engineer}{\link{https://geops.com}{geOps}}{Germany}
